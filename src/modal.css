@@ -1,0 +1,201 @@
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal {
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    flex: 0 1;
+
+    z-index: 9995;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal * {
+    box-sizing: border-box;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .4s;
+    -webkit-animation-timing-function: ease-out;
+    animation-name: animatetop;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+}
+
+
+/* Modal Header */
+
+.modal-header {
+    padding: 6px 12px;
+}
+
+
+
+/* Modal Body */
+
+.modal-body {
+    padding: 6px 12px;
+    margin: 0;
+}
+
+.modal-body > * {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+
+
+/* Modal Footer */
+
+.modal-footer {
+    margin-top: 12px;
+    padding: 6px 12px;
+    text-align: right;
+}
+
+
+
+/* Buttons */
+
+.modal .button-bar {
+    text-align: center;
+}
+
+.modal .button-bar input[type="button"] {
+    margin-top: 0;
+    line-height: 1;
+    height: inherit;
+}
+
+.modal .button-bar form, .modal .button-bar input.close {
+    display: inline-block;
+    width: 49%;
+    margin: 0;
+    line-height: 1;
+    vertical-align: top;
+
+}
+
+.modal .button-bar input.close, .modal .button-bar input.donate {
+    padding: 12px 24px;
+    border: none;
+    border-bottom: solid 4px #c0392b;
+
+    font-size: .9em;
+    text-transform: uppercase;
+
+    background-color: #e74c3c;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.modal .button-bar input.close {
+    background-color: #34495e;
+    border-bottom: solid 4px #2c3e50;
+}
+
+.modal .button-bar input.donate {
+    width: 100%;
+    background-color: #e74c3c;
+    border-bottom: solid 4px #c0392b;
+}
+
+/* Helper */
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Progress */
+
+.donation-bar {
+    padding: 12px 24px;
+}
+
+
+.progress circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-meter,
+.progress-value {
+    fill: none;
+}
+
+.progress-meter {
+    stroke: #e6e6e6;
+}
+
+.progress-value {
+    stroke: #e74c3c;
+    stroke-linecap: round;
+}
+
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -200px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -200px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
